@@ -1,0 +1,430 @@
+/* CSS Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #2c3e50;
+    --secondary-color: #3498db;
+    --accent-color: #e74c3c;
+    --light-color: #ecf0f1;
+    --dark-color: #2c3e50;
+    --text-color: #333;
+    --text-light: #777;
+    --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --transition: all 0.3s ease;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: #f9f9f9;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header Section */
+.header-section {
+    background: linear-gradient(rgba(44, 62, 80, 0.9), rgba(44, 62, 80, 0.9)), 
+                url('https://images.unsplash.com/photo-1517697471339-4aa32003c11a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1176&q=80') center/cover no-repeat;
+    color: white;
+    text-align: center;
+    padding: 80px 0;
+    margin-bottom: 30px;
+}
+
+.header-section h1 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 3.5rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+}
+
+.header-section h2 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 1.8rem;
+    text-transform: capitalize;
+}
+
+/* Navigation - Demonstrating display properties */
+.main-nav {
+    background-color: var(--primary-color);
+    padding: 15px 0;
+    margin-bottom: 40px;
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+.nav-item {
+    margin: 0 20px;
+}
+
+.nav-link {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 5px 10px;
+    border-radius: 4px;
+    transition: var(--transition);
+    display: inline-block; /* Demonstrating inline-block */
+}
+
+.nav-link:hover {
+    background-color: var(--secondary-color);
+    color: white;
+}
+
+/* Profile Section - Using Flexbox */
+.profile-section {
+    padding: 60px 0;
+    background-color: white;
+}
+
+.profile-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+.profile-image {
+    flex: 0 0 300px;
+}
+
+.profile-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+}
+
+.profile-bio {
+    flex: 1;
+}
+
+.section-title {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 2.2rem;
+    color: var(--primary-color);
+    margin-bottom: 25px;
+    text-transform: capitalize;
+    text-align: left;
+}
+
+.profile-bio p {
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--text-light);
+}
+
+/* Skills Section - Using CSS Grid */
+.skills-section {
+    padding: 80px 0;
+    background-color: #f5f7fa;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.skill-card {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+    text-align: center;
+    transition: var(--transition);
+}
+
+.skill-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.skill-icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f0f7ff;
+    border-radius: 50%;
+}
+
+.skill-icon img {
+    width: 50px;
+    height: 50px;
+}
+
+.skill-card h3 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: var(--primary-color);
+    text-transform: capitalize;
+}
+
+.skill-card p {
+    color: var(--text-light);
+    font-size: 1rem;
+}
+
+/* Interests Section - Using CSS Grid */
+.interests-section {
+    padding: 80px 0;
+    background-color: white;
+}
+
+.interests-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.interest-card {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    transition: var(--transition);
+}
+
+.interest-card:hover {
+    background-color: var(--secondary-color);
+    transform: translateY(-5px);
+}
+
+.interest-card h3 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    text-transform: capitalize;
+}
+
+.interest-card p {
+    font-size: 1rem;
+    opacity: 0.9;
+}
+
+/* Contact Section */
+.contact-section {
+    padding: 80px 0;
+    background-color: #f5f7fa;
+}
+
+.contact-form {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+}
+
+.form-group {
+    margin-bottom: 25px;
+}
+
+.form-label {
+    display: block; /* Demonstrating block display */
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: var(--primary-color);
+    text-transform: capitalize;
+}
+
+.form-input, .form-textarea {
+    width: 100%;
+    padding: 15px;
+    border: 2px solid #e0e0e0;
+    border-radius: 5px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1rem;
+    transition: var(--transition);
+}
+
+.form-input:focus, .form-textarea:focus {
+    border-color: var(--secondary-color);
+    outline: none;
+}
+
+.submit-btn {
+    background-color: var(--secondary-color);
+    color: white;
+    border: none;
+    padding: 15px 40px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: var(--transition);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    display: block; /* Demonstrating block display */
+    width: 100%;
+    max-width: 200px;
+    margin: 0 auto;
+}
+
+.submit-btn:hover {
+    background-color: #2980b9;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(41, 128, 185, 0.3);
+}
+
+/* Footer */
+.footer {
+    background-color: var(--dark-color);
+    color: white;
+    text-align: center;
+    padding: 40px 0;
+}
+
+.footer-text {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+    text-transform: capitalize;
+}
+
+.footer-subtext {
+    font-size: 1rem;
+    opacity: 0.8;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .interests-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .header-section h1 {
+        font-size: 2.8rem;
+    }
+    
+    .header-section h2 {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .profile-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .profile-image {
+        flex: 0 0 auto;
+        width: 70%;
+        max-width: 300px;
+        margin-bottom: 30px;
+    }
+    
+    .section-title {
+        text-align: center;
+    }
+    
+    .nav-list {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .nav-item {
+        margin: 10px 0;
+    }
+    
+    .header-section h1 {
+        font-size: 2.2rem;
+    }
+    
+    .header-section h2 {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .interests-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .contact-form {
+        padding: 25px;
+    }
+    
+    .header-section h1 {
+        font-size: 1.8rem;
+    }
+    
+    .header-section h2 {
+        font-size: 1rem;
+    }
+    
+    .profile-image {
+        width: 90%;
+    }
+    
+    .section-title {
+        font-size: 1.8rem;
+    }
+}
+
+/* Additional display property examples */
+.inline-example {
+    display: inline; /* Demonstrating inline display */
+    color: var(--secondary-color);
+    font-weight: bold;
+}
+
+.block-example {
+    display: block; /* Another example of block display */
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #f0f0f0;
+}
+
+.inline-block-example {
+    display: inline-block; /* Demonstrating inline-block */
+    width: 150px;
+    height: 50px;
+    background-color: var(--secondary-color);
+    color: white;
+    text-align: center;
+    line-height: 50px;
+    margin: 10px;
+    border-radius: 5px;
+}

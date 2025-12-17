@@ -4,13 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
     <title>Yewala Obssi - Personal Profile</title>
 </head>
 <body>
-    <!-- Header Section -->
     <header class="header-section">
         <div class="container">
             <h1>Yewala Obssi</h1>
@@ -18,7 +14,6 @@
         </div>
     </header>
 
-    <!-- Navigation (for practice with display properties) -->
     <nav class="main-nav">
         <div class="container">
             <ul class="nav-list">
@@ -29,74 +24,72 @@
         </div>
     </nav>
 
-    <!-- Profile Section -->
     <section id="profile" class="profile-section">
         <div class="container">
             <div class="profile-content">
                 <div class="profile-image">
-                    <img src="FEB_2416   J (1).JPG" alt="Yewala Obssi - Profile Image">
+                    <img src="FEB_2416   J (1).JPG" alt="Yewala Obssi - Profile Image" class="my-profile-img">
                 </div>
                 <div class="profile-bio">
                     <h2 class="section-title">About Me</h2>
                     <p>I'm Yewala Obssi, a Computer Science & Engineering student at Adama Science and Technology University. I'm passionate about programming, software development, and exploring innovative technologies. I enjoy learning new skills, solving problems, and creating projects that make a real impact in the tech world.</p>
                     <p>When I'm not coding, you can find me reading tech blogs, participating in hackathons, or exploring new frameworks and libraries. My goal is to become a full-stack developer and contribute to open-source projects that solve real-world problems.</p>
+                    
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Skills Section -->
     <section id="skills" class="skills-section">
         <div class="container">
             <h2 class="section-title">My Skills</h2>
             <div class="skills-grid">
                 <div class="skill-card">
                     <div class="skill-icon">
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python">
+                        <img src="phyton.png" alt="Python">
                     </div>
                     <h3>Python</h3>
                     <p>Experienced in Python for web development, data analysis, and automation.</p>
                 </div>
                 <div class="skill-card">
                     <div class="skill-icon">
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript">
+                        <img src="js.png" alt="JavaScript">
                     </div>
                     <h3>JavaScript</h3>
                     <p>Proficient in vanilla JS and modern ES6+ features for interactive web applications.</p>
                 </div>
                 <div class="skill-card">
                     <div class="skill-icon">
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React">
+                        <img src="react.png" alt="React">
                     </div>
                     <h3>React</h3>
                     <p>Building dynamic user interfaces with React hooks and functional components.</p>
                 </div>
                 <div class="skill-card">
                     <div class="skill-icon">
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js">
+                        <img src="talwind.png" alt="Tailwind CSS">
                     </div>
-                    <h3>Node.js</h3>
+                    <h3>tailwindcss</h3>
                     <p>Creating server-side applications and RESTful APIs with Express.js.</p>
                 </div>
                 <div class="skill-card">
                     <div class="skill-icon">
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5">
+                        <img src="html.png" alt="HTML5">
                     </div>
                     <h3>HTML5</h3>
                     <p>Semantic HTML structure and modern web standards.</p>
                 </div>
                 <div class="skill-card">
                     <div class="skill-icon">
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3">
+                        <img src="css.png" alt="CSS3">
                     </div>
-                    <h3>CSS3</h3>
+                    <h3>CSS</h3>
                     <p>Responsive design, Flexbox, Grid, and modern CSS techniques.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Interests Section -->
     <section class="interests-section">
         <div class="container">
             <h2 class="section-title">My Interests</h2>
@@ -121,10 +114,9 @@
         </div>
     </section>
 
-    <!-- Contact Section -->
     <section id="contact" class="contact-section">
         <div class="container">
-            <h2 class="section-title">Get In Touch</h2>
+            <h2 class="section-title">Contact Me</h2>
             <form class="contact-form">
                 <div class="form-group">
                     <label for="name" class="form-label">Full Name</label>
@@ -143,7 +135,6 @@
         </div>
     </section>
 
-    <!-- Footer -->
     <footer class="footer">
         <div class="container">
             <p class="footer-text">Yewala Obssi &copy; <span id="currentYear"></span> All Rights Reserved</p>
@@ -152,15 +143,16 @@
     </footer>
 
     <script>
-        // Set current year in footer
-        document.getElementById('currentYear').textContent = new Date().getFullYear();
-        
-        // Form submission handler
-        document.querySelector('.contact-form').addEventListener('submit', function(e) {
-            e.preventDefault();
-            alert('Thank you for your message! I will get back to you soon.');
-            this.reset();
-        });
-    </script>
+    const year = document.getElementById('currentYear');
+    const form = document.querySelector('.contact-form');
+    
+    year.textContent = new Date().getFullYear();
+    
+    form.addEventListener('submit', function(e) {
+        e.preventDefault();
+        alert('Thank you for your message! I will get back to you soon.');
+        this.reset();
+    });
+</script>
 </body>
 </html>
